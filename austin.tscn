@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0aw8mtjy1wpq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxqk6"]
+albedo_color = Color(0.447059, 1, 1, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_ce6fh"]
+material = SubResource("StandardMaterial3D_pxqk6")
+inner_radius = 10.0
+outer_radius = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ep6t"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_va32b"]
+material = SubResource("StandardMaterial3D_1ep6t")
+top_radius = 3.2
+bottom_radius = 3.2
+height = 20.0
+
+[node name="Austin" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_ce6fh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("CylinderMesh_va32b")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.38642, 5.54223)
+text = "Bruh"
+font_size = 300
