@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfuxy6mqosum0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e70y1"]
+albedo_color = Color(0.842266, 0.185922, 4.81307e-07, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_33fb5"]
+material = SubResource("StandardMaterial3D_e70y1")
+
+[node name="Cristian" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_33fb5")
